@@ -32,6 +32,11 @@ object Demo01 {
     //5.创建dataFrame
     //需要隐式转换          !!!
 
+   /* import SparkSession.implicits._
+    personRdd.toDF*/
+
+
+
     //---------------------DSL风格语法-------------start
 
 
