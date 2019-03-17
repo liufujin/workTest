@@ -39,7 +39,11 @@ object Demo01 {
 
     //---------------------DSL风格语法-------------start
 
+  //  personRdd.printSchema()
 
+    val a=1
+    val b=10
+    println(a+b)
 
     //println(" ---------------------SQL风格语法-------------start ")
 
