@@ -5,5 +5,6 @@ public class JavaDemo01 {
         System.out.println("this is a java class!!");
         System.out.println("222222");
 
+        System.out.println("333333");
     }
 }
