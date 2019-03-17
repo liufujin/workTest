@@ -15,13 +15,8 @@ object Demo01 {
       .master("local[1]")
       .getOrCreate()
 
-
-    val text: DataFrame = ss.read.text("/person.txt")
-
+    val text: DataFrame = ss.read.text("d://person.txt")
     text.show()
-
-
-
 
 
     //2.创建sc对象
@@ -42,20 +37,22 @@ object Demo01 {
     //需要隐式转换          !!!
 
     import ss.implicits._
-    personRdd.toDF
+    val personDF: DataFrame = personRdd.toDF
 
 
+    personDF.printSchema()
+    personDF.show()
 
     //---------------------DSL风格语法-------------start
 
-	val m=2
+/*	val m=2
 	val n=3
 	println(m+n)
   //  personRdd.printSchema()
 
     val a=1
     val b=10
-    println(a+b)
+    println(a+b)*/
 
     //println(" ---------------------SQL风格语法-------------start ")
 
