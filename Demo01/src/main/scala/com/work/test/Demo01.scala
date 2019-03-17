@@ -2,7 +2,7 @@ package com.work.test
 
 import org.apache.spark.SparkContext
 import org.apache.spark.rdd.RDD
-import org.apache.spark.sql.SparkSession
+import org.apache.spark.sql.{DataFrame, Dataset, SparkSession}
 
 
 // 将rdd转化成dataFrame(利用了反射机制)   DataFrame常用操作
@@ -14,6 +14,15 @@ object Demo01 {
     val ss: SparkSession = SparkSession.builder().appName("worktest")
       .master("local[1]")
       .getOrCreate()
+
+
+    val text: DataFrame = ss.read.text("/person.txt")
+
+    text.show()
+
+
+
+
 
     //2.创建sc对象
     val sc: SparkContext = ss.sparkContext
@@ -32,8 +41,8 @@ object Demo01 {
     //5.创建dataFrame
     //需要隐式转换          !!!
 
-   /* import SparkSession.implicits._
-    personRdd.toDF*/
+    import ss.implicits._
+    personRdd.toDF
 
 
 
