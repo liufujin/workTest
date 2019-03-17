@@ -39,6 +39,9 @@ object Demo01 {
 
     //---------------------DSL风格语法-------------start
 
+	val m=2
+	val n=3
+	println(m+n)
 
 
     //println(" ---------------------SQL风格语法-------------start ")
