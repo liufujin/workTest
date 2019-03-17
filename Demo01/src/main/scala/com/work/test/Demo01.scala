@@ -42,7 +42,11 @@ object Demo01 {
 	val m=2
 	val n=3
 	println(m+n)
+  //  personRdd.printSchema()
 
+    val a=1
+    val b=10
+    println(a+b)
 
     //println(" ---------------------SQL风格语法-------------start ")
 
