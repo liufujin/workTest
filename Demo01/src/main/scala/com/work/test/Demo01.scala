@@ -47,6 +47,8 @@ object Demo01 {
 
     //关闭
 
+    sc.stop()
+    ss.stop()
 
   }
 
